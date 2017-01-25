@@ -1,0 +1,33 @@
+body {
+    background-color: #000000;
+    margin: 0px;
+    overflow: hidden;
+}
+
+a {
+    color:#0078ff;
+}
+
+.joint {
+    background-color: red;
+    width:10px;
+    height:10px;
+    border-radius: 3px;
+}
+
+.joint div {
+    font-size: 10px;
+    color:white;
+    font-family: Courier, Arial, "Helvetica Neue", sans-serif;
+    font-weight: 100;
+    margin-left:15px;
+    width:100px;
+}
+
+.circle {
+
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    opacity: 0.5;
+}

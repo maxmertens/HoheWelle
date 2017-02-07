@@ -33,7 +33,7 @@ animate();
 function init() {
 
 
-    ///////////////////////KINECT STUFF /////////////////////
+///////////////////////////   KINECT STUFF   ////////////////////////////////////////////////////////////////
 
     //Init Kinect connection, start depth
     FusionKinect.connect("172.17.11.137");
@@ -68,8 +68,8 @@ function init() {
 
     renderer.render(scene, camera);
     $("#webGL-container").append(renderer.domElement);
-
-    ////////////////////////////////////////////////////////
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     container = document.createElement( 'div' );
@@ -92,7 +92,6 @@ function init() {
             context.beginPath();
             context.arc( 0, 0, 0.5, 0, PI2, true );
             context.fill();
-
         }
 
     } );
@@ -107,7 +106,6 @@ function init() {
             particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );
             particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 );
             scene.add( particle );
-
         }
     }
 
@@ -118,8 +116,6 @@ function init() {
 
     stats = new Stats();
     container.appendChild( stats.dom );
-
-
 }
 
 
@@ -134,9 +130,6 @@ function animate() {
 
 function render() {
     data = FusionKinect.getSkeletonData();
-
-//        console.log(data.Skeletons);
-
 
     var calcSizeZ = data.Skeletons[0].absoluteRawSkeleton.Head.position.Z*500;
     var calcSizeX = data.Skeletons[0].absoluteRawSkeleton.Head.position.X*500;
@@ -171,13 +164,8 @@ function render() {
                 ( Math.sin( ( iy + count ) * 0.5 ) * HandRightY );
             particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 4 +
                 ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * HandLeftY;
-
         }
-
     }
-
     renderer.render( scene, camera );
-
     count += 0.1;
-
 }

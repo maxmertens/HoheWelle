@@ -4,10 +4,6 @@ body {
     overflow: hidden;
 }
 
-a {
-    color:#0078ff;
-}
-
 .joint {
     background-color: red;
     width:10px;
